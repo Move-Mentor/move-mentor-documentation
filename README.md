@@ -223,16 +223,16 @@ Part B involved the testing, development and deployment of the Move Mentor app. 
 Netlify URL: https://move-mentor.netlify.app  
 Heroku URL: https://move-mentor-backend-7b2e10d24b58.herokuapp.com
 
-## Libraries Used
-The following libraries were used to assist with developing app functionality and features:  
+## Libraries & Packages Used
+The following libraries and packages were used to assist with developing app functionality and features:  
 **NEED DETAILED DESCRIPTON OF EACH** 
-* bcrypt
-* cors
-* dotenv
-* express-validator
-* helmet
-* jsonwebtoken
-* mongoose
+* Axios: Makes HTTP requests to the Express server. It supports the JavaScript ES6 Promise API, uses API URLs in the request object and executes automatic transformation of JSON data.
+* bcrypt: Password hashing algorithm that takes a user-submitted password and converts it into a randomly generated string. The hashed password is what is stored in the Move Mentor database, increasing security of student and teacher data.
+* dotenv: Automatically loads environment variables from a .env file into a process.env object, ensuring storing configuration in the environment is separate from code. Environment variables can then be accessed using the pattern process.env.KEY. These keys are used to access variables such as port and host values, and the production database URL.
+* express-validator: Express middleware to support the validation of data properties in a student model during the signup process. For example, ensure required fields are entered, a password is 8 or more characters in length and email addresses are valid.
+* Helmet: Express middleware to automatically add and set HTTP response headers that improve the security of the app.
+* jsonwebtoken: Creates and manages JSON web tokens which are used to securely transmit student and teacher data between the backend and frontend as a JSON object. It is used for authenticating student and teacher profiles and authorising the profiles so they can take specific actions i.e. a teacher can add or delete moves from a lesson, a student can delete their profile, or view specific pages i.e. a student can only view their lesson move data.
+* Mongoose: An Object Data Modelling library for MongoDB that has been used for data modeling, schema enforcement, model validation and general data manipulation. Mongoose Schemas were used to create the .... models....and using Mongoose queries to CRUD.
 * jest
 * jest supertest
 * bootstrap
@@ -275,8 +275,15 @@ Insomnia screenshots
 Jam.dev videos   
 Spreadsheet
 
+Jam.dev videos:
+https://jam.dev/c/6089e732-189d-482b-b4c2-58a3022d20f3
+https://jam.dev/c/35ea9f79-9978-45fd-8309-30a4b86fc0d3 
+https://jam.dev/c/48ee100e-c6d9-4bb7-a104-44cd0d15cafd
+https://jam.dev/c/8104ec37-8617-4e84-b5e5-f65afcb2bb88
+
+
 ### Production Testing
-That matches user stories!!!!  
+Show how the app matches user stories!!!!  
 spreadsheet by user
 jam.dev videos
 
