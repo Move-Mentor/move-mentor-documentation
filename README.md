@@ -216,7 +216,7 @@ Throughout Part A, we used agile methodology by breaking the project down into p
 <div style="page-break-after: always"></div>
 
 ## PART B DEVELOPMENT, TESTING & DEPLOYMENT
-Part B involved the testing, development and deployment of the Move Mentor app. This included developing individual components ....etc 
+Part B involved the testing, development and deployment of the Move Mentor app. This included developing and testing individual components and functions for the frontend and backend, collaboration and review of codebases via GitHub featuring branching, setting up the database in MongoDB Cloud Atlas, and deployment of the api to Heroku. The React frontend was deployed in Part A to ensure we secured a custom app URL.
 
 [View the Part B app presentation on Vimeo](https://vimeo.com/844095208?share=copy) --> this link needs to be updated for part b preso
 
@@ -225,21 +225,18 @@ Heroku URL: https://move-mentor-backend-7b2e10d24b58.herokuapp.com
 
 ## Libraries & Packages Used
 The following libraries and packages were used to assist with developing app functionality and features:  
-**NEED DETAILED DESCRIPTON OF EACH** 
 * Axios: Makes HTTP requests to the Express server. It supports the JavaScript ES6 Promise API, uses API URLs in the request object and executes automatic transformation of JSON data.
 * bcrypt: Password hashing algorithm that takes a user-submitted password and converts it into a randomly generated string. The hashed password is what is stored in the Move Mentor database, increasing security of student and teacher data.
 * dotenv: Automatically loads environment variables from a .env file into a process.env object, ensuring storing configuration in the environment is separate from code. Environment variables can then be accessed using the pattern process.env.KEY. These keys are used to access variables such as port and host values, and the production database URL.
 * express-validator: Express middleware to support the validation of data properties in a student model during the signup process. For example, ensure required fields are entered, a password is 8 or more characters in length and email addresses are valid.
 * Helmet: Express middleware to automatically add and set HTTP response headers that improve the security of the app.
 * jsonwebtoken: Creates and manages JSON web tokens which are used to securely transmit student and teacher data between the backend and frontend as a JSON object. It is used for authenticating student and teacher profiles and authorising the profiles so they can take specific actions i.e. a teacher can add or delete moves from a lesson, a student can delete their profile, or view specific pages i.e. a student can only view their lesson move data.
-* Mongoose: An Object Data Modelling library for MongoDB that has been used for data modeling, schema enforcement, model validation and general data manipulation. Mongoose Schemas were used to create the .... models....and using Mongoose queries to CRUD.
-* jest
-* jest supertest
-* bootstrap
-* react-bootstrap
-* react-dom
-* react-router-dom
-* react testing library
+* Mongoose: An Object Data Modelling library for MongoDB that has been used for data modeling, schema enforcement, and general data manipulation. Mongoose Schemas were used to map to the lessons, moves, students and teachers MongoDB collections, setting the specific fields and properties of each field, such as what fields were required, what fields were unique, and also any references to other collections. We also used Mongoose queries to create, read, update and delete data in the database via HTTP methods.
+* Jest: A JavaScript testing framework which allowed us to perform unit testing on individual React components and Express routes and CRUD functionality. It also allowed us to review test code coverage.
+* Supertest: A library for testing Node.js HTTP servers, which allowed us to test HTTP requests in conjunction with the Jest framework.
+* React Testing Library: A library for testing React components in conjunction with the Jest framework, by working with DOM nodes as opposed to rendered React components.
+* React Bootstrap: A library that provides React components that are built on top of Bootstrap. It was used for creating consistent, visually appealing React components and it saved us time by providing pre-built components.
+* react-router-dom: A library for routing in the frontend. It provided us with a way to define the frontend routes, ensuring that users navigate to the correct page when clicking on a link or button, or submitting a form.
 
 <div style="page-break-after: always"></div>
 
@@ -280,6 +277,8 @@ https://jam.dev/c/6089e732-189d-482b-b4c2-58a3022d20f3
 https://jam.dev/c/35ea9f79-9978-45fd-8309-30a4b86fc0d3 
 https://jam.dev/c/48ee100e-c6d9-4bb7-a104-44cd0d15cafd
 https://jam.dev/c/8104ec37-8617-4e84-b5e5-f65afcb2bb88
+https://jam.dev/c/b82e618a-9f95-4fa5-b78b-220ee6edd1a1 
+https://jam.dev/c/34adff05-389f-45e1-8a0d-513b02949dde 
 
 
 ### Production Testing
@@ -290,10 +289,23 @@ jam.dev videos
 <div style="page-break-after: always"></div>
 
 ## Project Management and Task Delegation
-[View the Trello board](https://trello.com/b/FzbSu39R)  
-Include screenshots
-* Explain what each person was responsible for, how they did it, and why they were working on that component (e.g. due to expertise, desire to learn more, pure enjoyment etc). Write about each team member’s preference for tasks and why, and their strengths and weaknesses.  
-* Task delegation methodology i.e. assign tasks in Trello cards, making comments on what you’ve done, include an explanation of the task and the difficulty level and corresponding git branch and categorise each task e.g. development task, testing task, etc.
+We used the following platforms for project management and planning:
+
+- Trello for agile planning, executing and evaluating cycles. We created a card for each task of the project and assigned a team member and due date. We used the Trello cards to share questions, feedback and important information and links. Tasks were assigned to lists that followed the workflow states of to do, in progress, in review, blocked and done. As we progressed with each task, we moved our task cards to the relevant workflow state. [View the Trello board](https://trello.com/b/FzbSu39R)
+- Google Drive for sharing of documentation, dataflow and app architecture diagrams, images, and any other important pieces of information to help us successfully complete part A of the project.
+- Discord chat for sharing quick updates of our progress, asking questions and providing feedback. We also scheduled formal meetings using video conferencing so we could share screens and our work in progress.
+
+Throughout Part B, we used agile methodology by breaking the project down into phases, split by the frontend and backend. We identified specific components and functions to be built, and a task was created around that component or function. Each task was moved into a specific phase of planning, executing and evaluating. We continually collaborated via pull requests in GitHub where we shared reviewed and tested each other's codebase in order to improve the outcome or final output of each task. 
+
+We decided to split Part B into frontend and backend responsibilities. Each team member would be responsible for developing tests and code for their 'end', and the other team member would review and test their code. Corina was assigned frontend responsibilities as this is her area of expertise for work and she has strong UI/UX skills. Karla was assigned backend responsiblities based on a preference and higher level of comfort working with Express and databases. Karla was also involved in the integration of the frontend with the backend to ensure app users could successfully perform CRUD functionality with the Move Mentor database.
+
+In Trello, we identified task responsibility by assigning a team member to the task card. In these task cards we created descriptions of the specific function or component we were building, and provided detailed instructions on how the other team member could review and test their work in platforms such as Insomnia, in the browser or in a development database. We also used colour labels to easily identify Part B tasks (pink label), and tasks that were related to specific users of the app: teacher (purple label), student (green label), or both (purple and green labels).
+
+<img title="trello screenshot - part b commencement" alt="part b commencement" src="docs/2023-07-14 a.png">  
+<img title="trello screenshot - frontend task" alt="frontend task" src="docs/2023-07-30 a.png">
+<img title="trello screenshot - backend task" alt="backend task" src="docs/2023-08-02 a.png">
+<img title="trello screenshot - integration task" alt="integration task" src="docs/2023-08-05 c.png">
+<img title="trello screenshot - part b almost finished" alt="part b almost finished" src="docs/2023-08-05 a.png">
 
 <div style="page-break-after: always"></div>
 
