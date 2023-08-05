@@ -218,10 +218,18 @@ Throughout Part A, we used agile methodology by breaking the project down into p
 ## PART B DEVELOPMENT, TESTING & DEPLOYMENT
 Part B involved the testing, development and deployment of the Move Mentor app. This included developing and testing individual components and functions for the frontend and backend, collaboration and review of codebases via GitHub featuring branching, setting up the database in MongoDB Cloud Atlas, and deployment of the api to Heroku. The React frontend was deployed in Part A to ensure we secured a custom app URL.
 
-[View the Part B app presentation on Vimeo](https://vimeo.com/844095208?share=copy) --> this link needs to be updated for part b preso
-
 Netlify URL: https://move-mentor.netlify.app  
 Heroku URL: https://move-mentor-backend-7b2e10d24b58.herokuapp.com
+
+Because there is only one teacher at C Solta Pole Studio, we have set one teacher login in the backend and this cannot be deleted, only the database administrator can do this for security purposes. To login as the teacher, please use these details:
+
+email: csoltapolestudio@gmail.com
+password: teacherpassword2
+
+You can also test an existing student with these details, or sign up a student for yourself.
+
+email: jensmith@email.com
+password: jenpassword
 
 ## Libraries & Packages Used
 The following libraries and packages were used to assist with developing app functionality and features:  
@@ -265,14 +273,14 @@ Using the Git Feature Branch Workflow was beneficial for:
 We used several methods to test individual components, integration functionality and app flow in development and production.
 
 ### Jest, Supertest and React Testing Library
-Include screenshots of passed tests in back and front ends
+We used Jest and Supertest in the backend and Jest in the frontend to create automated unit tests for individual components and functions. To run these tests, please use:
+
+```npm test```
 
 ### Development Testing
-Insomnia screenshots  
-Jam.dev videos   
-Spreadsheet
+We ran a set of manual tests in the development phase of the project, based on different scenarios. See tests here: https://docs.google.com/spreadsheets/d/1Iy9tfw0OFGJUvZYeYedv_7T6LObQgW2K7kkB5mAB8D8/edit#gid=0
 
-Jam.dev videos:
+We also used Jam.dev videos to share development testing of the front end:
 https://jam.dev/c/6089e732-189d-482b-b4c2-58a3022d20f3
 https://jam.dev/c/35ea9f79-9978-45fd-8309-30a4b86fc0d3 
 https://jam.dev/c/48ee100e-c6d9-4bb7-a104-44cd0d15cafd
@@ -280,11 +288,13 @@ https://jam.dev/c/8104ec37-8617-4e84-b5e5-f65afcb2bb88
 https://jam.dev/c/b82e618a-9f95-4fa5-b78b-220ee6edd1a1 
 https://jam.dev/c/34adff05-389f-45e1-8a0d-513b02949dde 
 
+And Insomnia for testing of the backend and all http methods and routes in both development and production:
+<img title="Insomnia Screenshot" alt="insomnia screenshot" src="docs/insomnia 2023-07-19 a.png>  
+<img title="trello screenshot - frontend task" alt="frontend task" src="docs/insomnia 2023-07-24 a.png">
+<img title="trello screenshot - backend task" alt="backend task" src="docs/insomnia 2023-07-29 b.png">
 
 ### Production Testing
-Show how the app matches user stories!!!!  
-spreadsheet by user
-jam.dev videos
+We ran a set of manual tests for production that matched user stories. See tests here: https://docs.google.com/spreadsheets/d/1t85vL-T_pNblB9Qf5v__Ka2MZGLga5bTAx12KzpRAAg/edit?usp=sharing
 
 <div style="page-break-after: always"></div>
 
